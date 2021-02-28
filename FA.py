@@ -11,7 +11,7 @@ except ImportError:
 try:
     import playsound
 except ImportError:
-    os.system('pip2 install playsound)
+    os.system('pip2 install playsound')
 
 try:
 	request = requests.get("https://www.google.com/search?q=accounting", timeout=3)

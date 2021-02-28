@@ -65,8 +65,6 @@ logo = """
 """
 
 hprint(G + 'Wait, script is loading...')
-from playsound import playsound
-playsound('FA.mp3')
 sleep(3)
 system("clear")
 print (logo)

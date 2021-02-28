@@ -107,8 +107,8 @@ BD = input('Bad Debts = ')
 sleep(1)
 OP = input('Old Provision = ')
 sleep(1)
-TP = int(PDD) + int(NP) + int(BD) //Total Provision including Bad Debts
-RP = int(TP) - int(OP) //Remaining Provision
+TP = int(PDD) + int(NP) + int(BD) #Total Provision including Bad Debts
+RP = int(TP) - int(OP) #Remaining Provision
 sleep(1)
 system("clear")
 R = input('Rent = ')
@@ -117,7 +117,7 @@ BC = input('Bank Charge = ')
 sleep(1)
 CO = input('Carriage Outward = ')
 sleep(1)
-DR = int(DF) + int(DM) int(S) + int(IP) + int(RP) + int(R) + int(BC) + int(CO) //Total Debit
+DR = int(DF) + int(DM) int(S) + int(IP) + int(RP) + int(R) + int(BC) + int(CO) #Total Debit
 sleep(1)
 hprint(G + 'Good, now profit & loss credit amounts !')
 sleep(1)
@@ -129,7 +129,7 @@ SR = input('Sundry Receipts = ')
 sleep(1)
 C = input('Commission = ')
 sleep(1)
-CR = int(TA) + int(BDR) + int(SR) + int(C) //Total Credit
+CR = int(TA) + int(BDR) + int(SR) + int(C) #Total Credit
 sleep(3)
 system("clear")
 hprint(G + 'Well done, let me calculate the net profit')

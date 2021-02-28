@@ -9,7 +9,7 @@ except ImportError:
     os.system('pip2 install requests')
 
 try:
-	request = requests.get("https://www.google.com/search?q=tahmid+rayat", timeout=3)
+	request = requests.get("https://www.google.com/search?q=accounting", timeout=3)
 except (requests.ConnectionError, requests.Timeout) as exception:
     print("[!] No internet connection [!]")
     sys.exit()
@@ -60,7 +60,8 @@ logo = """
 \033[1;32m    Created by itsjustoku @Kaku Baruah Copyright ©️ 2021
 """
 
-sleep(2)
+hprint(G + 'Wait, script is loading...')
+sleep(5)
 system("clear")
 print (logo)
 print ('')

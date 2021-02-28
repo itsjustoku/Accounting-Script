@@ -4,8 +4,7 @@ import time
 from os import system
 from time import sleep
 try:
-    import requests
-except ImportError:
+    import requests                                                   except ImportError:
     os.system('pip2 install requests')
 try:
     import playsound
@@ -13,7 +12,7 @@ except ImportError:
     os.system('pip3 install playsound')
 
 try:
-	request = requests.get("https://www.google.com/search?q=accounting", timeout=3)
+        request = requests.get("https://www.google.com/search?q=accounting", timeout=3)
 except (requests.ConnectionError, requests.Timeout) as exception:
     print("[!] No internet connection [!]")
     sys.exit()
@@ -32,14 +31,14 @@ def hprint(s):
         sys.stdout.flush()
         time.sleep(8.0 / 100)
 
-logo = """ 
-\033[1;31m                            #   #
-\033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
-\033[1;31m                           #######                                     
-\033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
-\033[1;31m                            #   #
+logo = """
+\033[1;31m                                  #   #
+\033[1;31m #####   #####   #####   #####     # #   #####   #####   #####   #####
+\033[1;31m                                 #######
+\033[1;31m #####   #####   #####   #####     # #   #####   #####   #####   #####
+\033[1;31m                                  #   #
 
-\033[1;31m     #      
+\033[1;31m     #
 \033[1;31m    # #    ####   ####   ####  #    # #    # ##### # #    #  #####
 \033[1;32m   #   #  #   #  #    # #    # #    # #    #   #   # #    # ##
 \033[1;32m  #     # #      #      #    # #    # # #  #   #   # # #  # #
@@ -53,13 +52,13 @@ logo = """
 \033[1;32m              ##  #      #####  # #####    #
 \033[1;31m           #   #  #    # #   #  # #        #
 \033[1;31m            ###    ####  #    # # #        #
- 
- 
-\033[1;31m                            #   #
-\033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
-\033[1;31m                           #######
-\033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
-\033[1;31m                            #   #
+
+
+\033[1;31m                                  #   #
+\033[1;31m #####   #####   #####   #####     # #   #####   #####   #####   #####
+\033[1;31m                                 #######
+\033[1;31m #####   #####   #####   #####     # #   #####   #####   #####   #####
+\033[1;31m                                  #   #
 
 \033[1;32m    Created by itsjustoku @Kaku Baruah Copyright ©️ 2021
 """
@@ -78,13 +77,13 @@ print('')
 hprint(G + 'Hey there, what is your name ?')
 name = input('Name:- ')
 sleep(1)
-hprint(G + 'Nice to meet you,' +name)
+hprint(G + 'Nice to meet you, ' + name)
 sleep(1)
-hprint(G + 'So you want to me solve your problems !')
+hprint(G + 'So you want me to solve your problems !')
 sleep(1)
-hprint(G + 'Cool, let us continue then')
+hprint(G + 'Cool, let us continue then !')
 sleep(1)
-hprint(G + 'Enter profit & loss debit amounts')
+hprint(G + 'Enter profit & loss debit amounts !')
 sleep(1)
 system("clear")
 F = input('Furniture = ')
@@ -117,7 +116,7 @@ BC = input('Bank Charge = ')
 sleep(1)
 CO = input('Carriage Outward = ')
 sleep(1)
-DR = DF + DM + S + IP + RP + R + BC + CO #Total Debit
+DR = int(DF) + int(DM) + int(S) + int(IP) + int(RP) + int(R) + int(BC) + int(CO)
 sleep(1)
 hprint(G + 'Good, now profit & loss credit amounts !')
 sleep(1)
@@ -133,19 +132,15 @@ CR = TA + BDR + SR + C #Total Credit
 sleep(3)
 system("clear")
 hprint(G + 'Well done, let me calculate the net profit')
-if (DR > CR):
+if int(DR) > int(CR):
      NP = int(DR) - int(CR)
      sleep(1)
-     print('The net profit is = ' +NP)
-elif(CR > DR):
+     print('The net profit is = ' + str(NP))
+else:
      NP = int(CR) - int(DR)
      sleep(1)
-     print('The net loss is = ' +NP)
-elif(DR == CR):
-     print('There is neither profit nor loss')
-else:
-     print('Error in calculating')
+     print('The net loss is = ' + str(NP))
 sleep(1)
-hprint(G + 'Thank you for using Accounting Script')
+hprint(G + 'Thank you for using Accounting Script !')
 print('')
 hprint(G + 'Have a good day ahead !')

@@ -12,6 +12,7 @@ sleep 2
 echo "Done !"
 sleep 2
 echo "Installing new files !"
+sleep 2
 git clone https://github.com/itsjustoku/Accounting-Script.git
 sleep 2
 echo "Done !"

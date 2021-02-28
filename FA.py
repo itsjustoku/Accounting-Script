@@ -2,11 +2,16 @@ import os
 import sys
 import time
 from os import system
+from playsound import playsound
 from time import sleep
 try:
     import requests
 except ImportError:
     os.system('pip2 install requests')
+try:
+    import playsound
+except ImportError:
+    os.system('pip2 install playsound)
 
 try:
 	request = requests.get("https://www.google.com/search?q=accounting", timeout=3)
@@ -35,13 +40,13 @@ logo = """
 \033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
 \033[1;31m                            #   #
 
-\033[1;31m     #                                                               
-\033[1;31m    # #    ####   ####   ####  #    # #    # #####  ###
-\033[1;32m   #   #  #   #  #    # #    # #    # #    #   #   #   
-\033[1;32m  #     # #      #      #    # #    # # #  #   #    ###
-\033[1;32m  ####### #      #      #    # #    # #  # #   #      ##
-\033[1;32m  #     # #    # #    # #    # #    # #   ##   #   #   #
-\033[1;31m  #     #  ####   ####   ####   ####  #    #   #    ###
+\033[1;31m     #      
+\033[1;31m    # #    ####   ####   ####  #    # #    # ##### # #    #  #####
+\033[1;32m   #   #  #   #  #    # #    # #    # #    #   #   # #    # ##
+\033[1;32m  #     # #      #      #    # #    # # #  #   #   # # #  # #
+\033[1;32m  ####### #      #      #    # #    # #  # #   #   # #  # # #   ###
+\033[1;32m  #     # #    # #    # #    # #    # #   ##   #   # #   ## #     #
+\033[1;31m  #     #  ####   ####   ####   ####  #    #   #   # #    # ######
 
 \033[1;33m            ###    ####  #####  # #####  #####
 \033[1;33m           #      #    # #    # # #    #   #
@@ -61,11 +66,13 @@ logo = """
 """
 
 hprint(G + 'Wait, script is loading...')
-sleep(5)
+playsound('FA.mp3')
+sleep(3)
 system("clear")
 print (logo)
+sleep(5)
 print ('')
-hprint(G + ' Welcoming you to Accounts Script...')
+hprint(G + ' Welcoming you to Accounting Script...')
 sleep(2)
 print ('')
 system("clear")
@@ -75,6 +82,6 @@ sleep(2)
 hprint(G + 'Debit amounts first')
 system("clear")
 F = input('Furniture =')
-DOF = input('Depn. of furniture =')
-DF = 'F' - 'DOF'
+DOF = input('Depn. on furniture in amount =')
+DF = int(F) - int(DOF)
 print ('DF')

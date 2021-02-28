@@ -2,7 +2,6 @@ import os
 import sys
 import time
 from os import system
-from playsound import playsound
 from time import sleep
 try:
     import requests
@@ -12,6 +11,7 @@ try:
     import playsound
 except ImportError:
     os.system('pip2 install playsound')
+from playsound import playsound
 
 try:
 	request = requests.get("https://www.google.com/search?q=accounting", timeout=3)

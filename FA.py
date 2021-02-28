@@ -10,8 +10,7 @@ except ImportError:
 try:
     import playsound
 except ImportError:
-    os.system('pip2 install playsound')
-from playsound import playsound
+    os.system('pip3 install playsound')
 
 try:
 	request = requests.get("https://www.google.com/search?q=accounting", timeout=3)
@@ -66,6 +65,7 @@ logo = """
 """
 
 hprint(G + 'Wait, script is loading...')
+from playsound import playsound
 playsound('FA.mp3')
 sleep(3)
 system("clear")

@@ -51,11 +51,11 @@ logo = """
 \033[1;31m            ###    ####  #    # # #        #
  
  
-                                      #   #
+\033[1;31m                            #   #
 \033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
 \033[1;31m                           #######
 \033[1;31m ##### ##### ##### #####     # #   ##### ##### ##### #####
-                                      #   #
+\033[1;31m                            #   #
 
 \033[1;32m    Created by itsjustoku @Kaku Baruah Copyright ©️ 2021
 """
@@ -72,7 +72,9 @@ system("clear")
 print('')
 hprint(G + ' Hey there... please input profit & loss amounts !')
 sleep(2)
+hprint(G + 'Debit amounts first')
+system("clear")
 F = input('Furniture =')
 DOF = input('Depn. of furniture =')
-DF = F - DOF
+DF = 'F' - 'DOF'
 print ('DF')

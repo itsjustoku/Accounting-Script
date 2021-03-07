@@ -3,21 +3,6 @@ import sys
 import time
 from os import system
 from time import sleep
-try:
-    import requests                                                   except ImportError:
-    os.system('pip2 install requests')
-try:
-    import playsound
-except ImportError:
-    os.system('pip3 install playsound')
-
-try:
-        request = requests.get("https://www.google.com/search?q=accounting", timeout=3)
-except (requests.ConnectionError, requests.Timeout) as exception:
-    print("[!] No internet connection [!]")
-    sys.exit()
-
-import requests
 
 R = '\033[1;31m'
 G = '\033[1;32m'
@@ -40,18 +25,18 @@ logo = """
 
 \033[1;31m     #
 \033[1;31m    # #    ####   ####   ####  #    # #    # ##### # #    #  #####
-\033[1;32m   #   #  #   #  #    # #    # #    # #    #   #   # #    # ##
+\033[1;33m   #   #  #   #  #    # #    # #    # #    #   #   # #    # ##
 \033[1;32m  #     # #      #      #    # #    # # #  #   #   # # #  # #
 \033[1;32m  ####### #      #      #    # #    # #  # #   #   # #  # # #   ###
-\033[1;32m  #     # #    # #    # #    # #    # #   ##   #   # #   ## #     #
+\033[1;33m  #     # #    # #    # #    # #    # #   ##   #   # #   ## #     #
 \033[1;31m  #     #  ####   ####   ####   ####  #    #   #   # #    # ######
 
-\033[1;33m            ###    ####  #####  # #####  #####
-\033[1;33m           #      #    # #    # # #    #   #
-\033[1;32m            ###   #      #    # # #    #   #
-\033[1;32m              ##  #      #####  # #####    #
-\033[1;31m           #   #  #    # #   #  # #        #
-\033[1;31m            ###    ####  #    # # #        #
+\033[1;33m                 ###    ####  #####  # #####  #####
+\033[1;33m                #      #    # #    # # #    #   #
+\033[1;32m                 ###   #      #    # # #    #   #
+\033[1;32m                   ##  #      #####  # #####    #
+\033[1;31m                #   #  #    # #   #  # #        #
+\033[1;31m                 ###    ####  #    # # #        #
 
 
 \033[1;31m                                  #   #
@@ -60,7 +45,7 @@ logo = """
 \033[1;31m #####   #####   #####   #####     # #   #####   #####   #####   #####
 \033[1;31m                                  #   #
 
-\033[1;32m    Created by itsjustoku @Kaku Baruah Copyright ©️ 2021
+\033[1;32m          Created by itsjustoku @Kaku Baruah Copyright ©️ 2021
 """
 
 hprint(G + 'Wait, script is loading...')
@@ -86,8 +71,8 @@ sleep(1)
 hprint(G + 'Enter profit & loss debit amounts !')
 sleep(1)
 system("clear")
-F = input('Furniture = ')
-DOF = input('Depn. on furniture in amount = ')
+F = int(input('Furniture = '))
+DOF = int(input('Depn. on furniture in amount = '))
 DF = int(F) - int(DOF)
 sleep(1)
 M = input('Machinery = ')
